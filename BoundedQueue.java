@@ -1,5 +1,3 @@
-package com.davidzhu.kpcb;
-
 public class BoundedQueue {
 	
 	private int size;

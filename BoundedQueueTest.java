@@ -1,14 +1,8 @@
-package com.davidzhu.tests;
-
 import static org.junit.Assert.*;
+import org.junit.*;
+import junit.framework.JUnit4TestAdapter;
 
-import org.junit.Test;
-
-import com.davidzhu.kpcb.BoundedQueue;
-import com.davidzhu.kpcb.QueueEmptyException;
-import com.davidzhu.kpcb.QueueFullException;
-
-public class BoundedQueueUnitTests {
+public class BoundedQueueTest {
 
 	@Test
 	public void testEnqueueToFull() throws QueueFullException {
@@ -104,4 +98,9 @@ public class BoundedQueueUnitTests {
 		
 		
 	}
+
+	public static junit.framework.Test suite(){
+  		return new JUnit4TestAdapter(BoundedQueueTest.class);
+ 	}
+
 }
